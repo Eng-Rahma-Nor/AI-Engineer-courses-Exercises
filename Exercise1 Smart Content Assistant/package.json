@@ -1,0 +1,14 @@
+{
+  "name": "smart-content-assistant",
+  "version": "1.0.0",
+  "description": "A CLI Smart Content Assistant that generates blog outlines, streams progress, summarizes, and answers follow-up questions using OpenAI.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "openai": "^4.60.0",
+    "dotenv": "^16.4.5"
+  }
+}
