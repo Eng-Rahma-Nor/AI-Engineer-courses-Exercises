@@ -1,0 +1,14 @@
+{
+  "name": "multi-voice-conversation",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Generate a multi-speaker conversation with different emotions/instructions per line using OpenAI TTS, saving each line as a separate audio file.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "openai": "^4.68.0",
+    "dotenv": "^16.4.5"
+  }
+}
