@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Deckhand — AI Presentation Creator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <h1>Deckhand</h1>
+      <span class="tag">an AI presentation drafting studio</span>
+    </header>
+
+    <form id="generate-form" class="controls">
+      <input
+        id="topic"
+        type="text"
+        placeholder="What's the presentation about? e.g. Launching a skincare brand on Instagram"
+        autocomplete="off"
+      />
+      <select id="slideCount">
+        <option value="3">3 slides</option>
+        <option value="4">4 slides</option>
+        <option value="5" selected>5 slides</option>
+        <option value="6">6 slides</option>
+        <option value="7">7 slides</option>
+        <option value="8">8 slides</option>
+      </select>
+      <button id="generate-btn" type="submit">
+        <span class="btn-label">Generate deck</span>
+      </button>
+    </form>
+
+    <p id="error" class="error hidden"></p>
+
+    <div id="empty-state" class="empty-state">
+      <div class="empty-icon">▦</div>
+      <p>Enter a topic above to generate a full deck — titles, talking points, a generated image, and narrated audio for every slide.</p>
+    </div>
+
+    <div id="loading" class="loading hidden">
+      <div class="spinner"></div>
+      <p id="loading-text">Drafting your deck…</p>
+    </div>
+
+    <div id="deck" class="deck hidden">
+      <aside id="thumb-rail" class="thumb-rail"></aside>
+      <div class="stage">
+        <div class="slide-card">
+          <img id="slide-image" class="slide-image" alt="" />
+          <div class="slide-text">
+            <div id="slide-eyebrow" class="eyebrow"></div>
+            <h2 id="slide-title"></h2>
+            <ul id="slide-bullets"></ul>
+          </div>
+        </div>
+
+        <div class="slide-controls">
+          <div class="nav-buttons">
+            <button id="prev-btn" class="icon-btn" aria-label="Previous slide">‹</button>
+            <button id="next-btn" class="icon-btn" aria-label="Next slide">›</button>
+          </div>
+          <audio id="audio-player" preload="none"></audio>
+          <button id="play-btn" class="play-btn">
+            <span id="play-icon">▶</span>
+            <span id="play-label">Play narration</span>
+          </button>
+        </div>
+
+        <div class="notes">
+          <div class="notes-label">Speaker notes</div>
+          <p id="slide-notes"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>

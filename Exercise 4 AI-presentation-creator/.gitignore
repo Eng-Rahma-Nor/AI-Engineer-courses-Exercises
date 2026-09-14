@@ -1,0 +1,6 @@
+node_modules/
+.env
+generated/images/*
+generated/audio/*
+!generated/images/.gitkeep
+!generated/audio/.gitkeep
